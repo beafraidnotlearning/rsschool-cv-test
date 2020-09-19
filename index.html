@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Denis: Resume</title>
+    <link rel="stylesheet" href="styles/all.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="menu">
+        <ul>
+          <li><a href="index.html#contacts">CONTACTS</a></li>
+          <li><a href="index.html#aboutme">ABOUT ME</a></li>
+          <li><a href="index.html#skills">SKILLS</a></li>
+          <li><a href="index.html#code-examples">CODE EXAMPLES</a></li>
+          <li><a href="index.html#experience">WORK EXPERIENCE</a></li>
+          <li><a href="index.html#education">EDUCATION</a></li>
+          <li><a href="index.html#english-level">LEVEL OF ENGLISH</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="grid" id="contacts">
+        <section class="avatar-content">
+          <img class="avatar" src="images/avatar.png" alt="Denis Losik" width="200" height="200" />
+        </section>
+        <section class="contacts-content">
+          <div class="name-content">
+            <p class="first-name">Denis</p>
+            <p class="last-name">Losik</p>
+            <p class="brief-skills">Junior Web Developer</p>
+          </div>
+          <div class="location-content personal-data">
+            <h3>Location</h3>
+            <p>Minsk, Belarus</p>
+          </div>
+          <div class="phone-content personal-data">
+            <h3>Phone</h3>
+            <p>+375333513734</p>
+          </div>
+          <div class="github-content personal-data">
+            <h3>Github</h3>
+            <a href="https://github.com/beafraidnotlearning" target="_blank">beafraidnotlearning</a>
+          </div>
+          <div class="email-content personal-data">
+            <h3>Email</h3>
+            <a href="mailto:beafraidnotlearning@mail.ru" target="_blank">beafraidnotlearning@mail.ru</a>
+          </div>
+        </section>
+      </section>
+      <section class="grid" id="aboutme">
+        <div class="left left-content-color2">
+          <h2>About me</h2>
+        </div>
+        <div class="right right-content-color2">
+          <ul class="goals">
+            <li><span>My goals and wishes:</span></li>
+            <li>
+              <span>The desire to improve their skills in the area of web development.</span>
+            </li>
+            <li>
+              <span>Job search with a communicative team in the area of web development.</span>
+            </li>
+            <li>
+              <span>The desire to be the best in the area of interest</span>
+            </li>
+          </ul>
+          <div class="wishes">
+            <p>Why i decided to become a web developer:</p>
+            <p>
+              I've been looking for a programming area, that would really interest me for a long time. Only when I helped develop
+              a site to one of my friends. I realized that I want to continue to do this. From that moment on, I am looking for
+              development opportunities in the area of web-development. I believe that The Rolling Scopes School courses are a
+              great opportunity to become a high-class developer and I will definitely take advantage of it.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="grid" id="skills">
+        <div class="left left-content-color1">
+          <h2>Skills</h2>
+          <p>Progress bars</p>
+        </div>
+        <div class="right right-content-color1">
+          <div class="progress-bars">
+            <div class="progress-bar">
+              <p>HTML/CSS</p>
+              <progress max="100" value="90"></progress>
+            </div>
+            <div class="progress-bar">
+              <p>JavaScript</p>
+              <progress max="100" value="60"></progress>
+            </div>
+            <div class="progress-bar">
+              <p>C#</p>
+              <progress max="100" value="70"></progress>
+            </div>
+            <div class="progress-bar">
+              <p>ASP.NET</p>
+              <progress max="100" value="60"></progress>
+            </div>
+            <div class="progress-bar">
+              <p>MySQL</p>
+              <progress max="100" value="40"></progress>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="grid" id="code-examples">
+        <div class="left left-content-color2">
+          <h2>Code Exampless</h2>
+          <p>My code examples</p>
+        </div>
+        <div class="right right-content-color2">
+          <div class="examples">
+            <pre>
+              function solveSudoku(matrix) {
+                function SearchElement(matrixSudoku){
+                  const ARRAY = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+                  const LENGTH = ARRAY.length;
+                  let condition = true;
+                  let ibuff = 0, jbuff = 0;
+                  for(let i = 0; i < LENGTH; i++){
+                    for(let j = 0; j < LENGTH; j++){
+                      if(matrixSudoku[i][j] == 0){
+                        for(let k = 0; k < LENGTH; k++){
+                          condition = true;
+                          for(let n = 0; n < LENGTH; n++){
+                            ibuff = Math.floor(i / 3) + n % 3
+                            jbuff = Math.floor(j / 3) * 3 + Math.floor(n / 3)
+                            if(matrixSudoku[i][n] == ARRAY[k] || matrixSudoku[n][j] == ARRAY[k] || 
+                              matrixSudoku[ibuff][jbuff] == ARRAY[k]){
+                              condition = false;
+                            }
+                          }
+                          if(condition){
+                            matrixSudoku[i][j] = ARRAY[k];
+                            if(SearchElement(matrixSudoku)){
+                              return true;
+                            }
+                            else{
+                              matrixSudoku[i][j] = 0;
+                            }
+                          }
+                        }
+                        return false;
+                      }
+                    }
+                  }
+                  return true;
+                }
+                SearchElement(matrix);
+                return matrix;
+              }
+            </pre>
+          </div>
+        </div>
+      </section>
+      <section class="grid" id="experience">
+        <div class="left left-content-color1">
+          <h2>Work experience</h2>
+          <p>My web-development experience</p>
+        </div>
+        <div class="right right-content-color1">
+          <ul class="goals">
+            <li>
+              <span>Web-development experience:</span>
+            </li>
+            <li>
+              <span>Information and calculation portal for solving matrix equations.</span>
+            </li>
+            <li>
+              <span>Development of the site dedicated to the foundation and plinth.</span>
+            </li>
+            <li>
+              <span>Development of a web resource that regulates the production of parts through technological processes.</span>
+            </li>
+          </ul>
+          <ul class="goals">
+            <li>
+              <span>Web-development experience:</span>
+            </li>
+            <li>
+              <span>https://ru.code-basics.com/languages/html</span>
+            </li>
+            <li>
+              <span>https://ru.code-basics.com/languages/css</span>
+            </li>
+            <li>
+              <span>https://ru.code-basics.com/languages/javascript</span>
+            </li>
+            <li>
+              <span>https://learn.javascript.ru/</span>
+            </li>
+            <li>
+              <span>https://exploringjs.com/es6/</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="grid" id="education">
+        <div class="left left-content-color2">
+          <h2>Education</h2>
+          <p>The stages of my training in the web development</p>
+        </div>
+        <div class="right right-content-color2">
+          <ul class="education">
+            <li>I studied at the BNTU, faculty FITR during 2014-2018, and studied at the BSTU, faculty FIT during 2018-2020.</li>
+          </ul>
+        </div>
+      </section>
+      <section class="grid" id="english-level">
+        <div class="left left-content-color1">
+          <h2>Level of English</h2>
+          <p>General information about my learning English</p>
+        </div>
+        <div class="right right-content-color1">
+          <div class="eng-level">
+            <p>
+              I watch serials in English and sometimes translate books. Also I doing a course in English every week. My English
+              level is A2.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2020 Denis Losik</p>
+      <div class="grid-footer">
+        <p>How to contact me:</p>
+        <a href="mailto:beafraidnotlearning@mail.ru" target="_blank">beafraidnotlearning@mail.ru</a>
+        <a href="https://web.telegram.org/#/im?p=@incdis" target="_blank">telegram</a>
+      </div>
+    </footer>
+  </body>
+</html>
