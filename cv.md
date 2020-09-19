@@ -66,3 +66,13 @@ function solveSudoku(matrix) {
     return matrix;
 }
 ```
+
+## Work experience
+
+_My courses and trainings completed:_
+
+- [Курс по HTML](https://ru.code-basics.com/languages/html)
+- [Курс по CSS](https://ru.code-basics.com/languages/css)
+- [Курс по Javascript](https://ru.code-basics.com/languages/javascript)
+- [Онлайн обучение Javascript](https://learn.javascript.ru/)
+- [Книга о Javascript](https://exploringjs.com/es6/)
